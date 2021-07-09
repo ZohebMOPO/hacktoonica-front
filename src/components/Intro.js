@@ -16,7 +16,7 @@ function Intro() {
           <div class="col-lg-6">
             <img
               class="title-image"
-              src="images/anime.png"
+              src="https://i.postimg.cc/nV6c6VXH/anime.png"
               alt="anime-friend"
             />
           </div>

@@ -9,7 +9,7 @@ function ATakes() {
             <div class="col-lg-6">
               <img
                 class="find-twin-image"
-                src="images/home.png"
+                src="https://i.postimg.cc/DyrFHrVg/home.png"
                 alt="anime-friend"
               />
             </div>
