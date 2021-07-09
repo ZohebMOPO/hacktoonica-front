@@ -16,7 +16,7 @@ Run `npm install --global yarn` in your terminal to install yarn.
 # Installing all node_modules
 
 Open your terminal.
-`cd cheese`.
+`cd into the project`.
 
 Run `yarn` in your terminal to install node_modules.
 
