@@ -4,12 +4,14 @@ import About from "./pages/About";
 import Anime from "./pages/Anime";
 import Error from "./pages/Error";
 import Game from "./pages/Game";
+import Home from "./pages/Home";
 function Router() {
   return (
     <div>
       <BrowserRouter>
         <div className="App">
           <Switch>
+            <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />
             <Route path="/twin" exact component={Anime} />
             <Route path="/game" exact component={Game} />

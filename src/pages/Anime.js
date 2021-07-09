@@ -1,7 +1,7 @@
 import React from "react";
 
 function Anime() {
-  return <div></div>;
+  return <div>Anime</div>;
 }
 
 export default Anime;
