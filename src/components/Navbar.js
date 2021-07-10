@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 function Navbar() {
@@ -27,14 +28,10 @@ function Navbar() {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#game-zone">
-                Game Zone
-              </a>
+              <Link to="/game">Game Zone</Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#anime-twin">
-                Anime Twin
-              </a>
+              <Link to="/toonify">Anime Twin</Link>
             </li>
           </ul>
         </div>
