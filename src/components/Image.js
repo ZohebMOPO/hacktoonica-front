@@ -46,7 +46,10 @@ class Image extends Component {
   render() {
     return (
       <div className="app">
-        <h1> Upload your image here and find your anime twin!</h1>
+        <h1 className="head">
+          {" "}
+          Upload your image here and find your anime twin!
+        </h1>
         <form onSubmit={this.handleSubmit}>
           <p>
             <input

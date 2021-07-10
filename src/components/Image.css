@@ -18,6 +18,9 @@ form {
 body {
   background-image: url("https://i.postimg.cc/qqqVVhvF/3.jpg");
 }
+.head {
+  color: aliceblue;
+}
 input {
   box-sizing: border-box;
   width: 100%;
