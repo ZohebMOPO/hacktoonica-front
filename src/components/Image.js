@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Image.css";
 import axios from "axios";
 
 class Image extends Component {
@@ -44,7 +45,7 @@ class Image extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <h1> Upload your image here and find your anime twin!</h1>
         <form onSubmit={this.handleSubmit}>
           <p>
@@ -56,7 +57,7 @@ class Image extends Component {
               required
             />
           </p>
-          <input type="submit" />
+          <input type="submit" className="in1" />
         </form>
         <div style={{ display: "block" }}>
           <img
