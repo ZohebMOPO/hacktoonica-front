@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Image.css";
 import axios from "axios";
 
 class Image extends Component {
