@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Snake.css";
 import Blank from "./blank.png";
-import Snake from "./snake.png";
+import Snake from "./snake.jpg";
 import Food from "./food.png";
 
 const SnakeBoard = () => {
