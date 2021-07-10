@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Image.css";
 import axios from "axios";
 
 class Image extends Component {
@@ -36,8 +37,8 @@ class Image extends Component {
       })
       .then((res) => {
         console.log(res.data);
-        document.getElementById("org").src = res.data['org_img'];
-        document.getElementById("toon").src = res.data['toon_img'];
+        document.getElementById("org").src = res.data["org_img"];
+        document.getElementById("toon").src = res.data["toon_img"];
       })
       .catch((err) => console.log(err));
   };
@@ -45,6 +46,7 @@ class Image extends Component {
   render() {
     return (
       <div className="App">
+        <h1> Upload your image here and find your anime twin!</h1>
         <form onSubmit={this.handleSubmit}>
           <p>
             <input
@@ -57,9 +59,19 @@ class Image extends Component {
           </p>
           <input type="submit" />
         </form>
-        <div style={{display: 'block'}}>
-          <img id='org' alt='org' src='' style={{height:'400px', width:'400px', objectFit: 'cover'}}/>
-          <img id='toon' alt='toon' src='' style={{height:'400px', width:'400px', objectFit: 'cover'}} />
+        <div style={{ display: "block" }}>
+          <img
+            id="org"
+            alt="org"
+            src=""
+            style={{ height: "400px", width: "400px", objectFit: "cover" }}
+          />
+          <img
+            id="toon"
+            alt="toon"
+            src=""
+            style={{ height: "400px", width: "400px", objectFit: "cover" }}
+          />
         </div>
       </div>
     );
