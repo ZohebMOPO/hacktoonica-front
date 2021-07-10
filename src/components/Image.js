@@ -8,11 +8,11 @@ class Image extends Component {
     image: null,
   };
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value,
-    });
-  };
+  // handleChange = (e) => {
+  //   this.setState({
+  //     [e.target.id]: e.target.value,
+  //   });
+  // };
 
   handleImageChange = (e) => {
     this.setState({
@@ -25,8 +25,8 @@ class Image extends Component {
     console.log(this.state);
     let form_data = new FormData();
     form_data.append("image", this.state.image, this.state.image.name);
-    form_data.append("title", this.state.title);
-    form_data.append("content", this.state.content);
+    // form_data.append("title", this.state.title);
+    // form_data.append("content", this.state.content);
     let url = "https://abhis-319407.el.r.appspot.com/api/posts";
     axios
       .post(url, form_data, {
@@ -36,6 +36,8 @@ class Image extends Component {
       })
       .then((res) => {
         console.log(res.data);
+        document.getElementById("org").src = res.data['org_img'];
+        document.getElementById("toon").src = res.data['toon_img'];
       })
       .catch((err) => console.log(err));
   };
@@ -44,26 +46,6 @@ class Image extends Component {
     return (
       <div className="App">
         <form onSubmit={this.handleSubmit}>
-          <p>
-            <input
-              type="text"
-              placeholder="Title"
-              id="title"
-              value={this.state.title}
-              onChange={this.handleChange}
-              required
-            />
-          </p>
-          <p>
-            <input
-              type="text"
-              placeholder="Content"
-              id="content"
-              value={this.state.content}
-              onChange={this.handleChange}
-              required
-            />
-          </p>
           <p>
             <input
               type="file"
@@ -75,6 +57,10 @@ class Image extends Component {
           </p>
           <input type="submit" />
         </form>
+        <div style={{display: 'block'}}>
+          <img id='org' alt='org' src='' style={{height:'400px', width:'400px', objectFit: 'cover'}}/>
+          <img id='toon' alt='toon' src='' style={{height:'400px', width:'400px', objectFit: 'cover'}} />
+        </div>
       </div>
     );
   }
