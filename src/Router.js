@@ -6,6 +6,7 @@ import Error from "./pages/Error";
 import Game from "./pages/Game";
 import Home from "./pages/Home";
 import Toonify from "./pages/Toonify";
+import Toonified from "./pages/Toonified";
 function Router() {
   return (
     <div>
@@ -17,6 +18,7 @@ function Router() {
             <Route path="/twin" exact component={Anime} />
             <Route path="/game" exact component={Game} />
             <Route path="/toonify" exact component={Toonify} />
+            <Route path="/toonified" exact component={Toonified} />
             <Route component={Error} />
           </Switch>
         </div>

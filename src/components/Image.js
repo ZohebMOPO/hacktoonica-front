@@ -27,7 +27,7 @@ class Image extends Component {
     form_data.append("image", this.state.image, this.state.image.name);
     form_data.append("title", this.state.title);
     form_data.append("content", this.state.content);
-    let url = "http://localhost:8000/api/posts/";
+    let url = "https://abhis-319407.el.r.appspot.com/api/posts";
     axios
       .post(url, form_data, {
         headers: {
